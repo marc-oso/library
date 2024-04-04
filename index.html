@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div class="grid-container">
+        <div class="header-wrapper">
+            <div class="header-cont">
+                <div class="greeting">
+                    <img src="./imgs/library.svg" alt="pic" class="pic">
+                    <div class="greet">Welcome!</div>
+                    <div class="message">Update Your Library</div>
+                </div>
+                <button class="add-book" type="button">Add Book</button>
+            </div>
+        </div>
+        <div class="main-cont">
+            <div class="books-cont">   
+                <div class="heading">Your Books</div>
+                <div class="books-wrapper"></div>
+                <div class="message-alert">
+                    <div class="add-message">Book Added ✅</div>
+                    <div class="delete-message">Book Deleted ✅</div>
+                    <div class="duplicate-message">Book Already Exists❗</div>
+                    <div class="status-message">Book Read Status Updated Successfully ✅</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-cont">
+        <div class="form-cont" id="form-cont">
+            <form class="add-book-form" id="addBookForm">
+              <h3>Add New Book</h3>
+              <input class="input" type="text" id="name" name="book-name" placeholder="Book Name" required maxlength="100">
+              <input class="input" type="text" id="author" name="book-author" placeholder="Author" maxlength="100" value="Unknown">
+              <input class="input" type="number" id="pages" name="book-pages" placeholder="Pages" required max="10000">
+              <div class="is-read">
+                <label for="read">Already Read</label>
+                <input class="read-checkbox" type="checkbox" id="read" name="read">
+              </div>
+              <button class="submit-btn" type="submit">Add to Library</button>
+            </form>
+        </div>
+    </div>  
+</body>
+</html>
